@@ -67,8 +67,8 @@ public class ControllerAdotante {
     @PutMapping
     @Transactional
     public void update(@RequestBody @Valid DadosAtualizarAdotanteDto dados){
-        var updateAll = repository.getReferenceById(dados.id());
-        updateAll.atualizando(dados);
+        var updateAl = repository.getReferenceById(dados.id());
+        updateAl.atualizando(dados);
     }
 
     @Operation(summary = "Deletar dados", description = "Deletar usuario", method = "DELETE")
